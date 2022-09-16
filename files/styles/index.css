@@ -1,36 +1,137 @@
-body {
-    background-image: url("../images/Plant1.jpg");
+html {
+  font-size: 100%;
+}
 
+body {
+  background-image: url("../images/Plant1.jpg");
 }
 
 header {
-    /* background-image: url("../images/Plant4.jpeg"); */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 500px;
-    position: relative;
-    text-align: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  position: relative;
+  text-align: center;
 }
 
 header h1 {
-    font-size: 5rem;
-    font-family: 'Times New Roman', Times, serif;
-    color: white;
+  font-size: 5rem;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
 }
 
 header h2 {
-    font-size: 3rem;
-    font-family: 'Times New Roman', Times, serif;
-    color: brown;
+  font-size: 3rem;
+  font-family: "Times New Roman", Times, serif;
+  color: white;
 }
 
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 16px;
+}
+
+.container h2 {
+  color: yellowgreen;
+}
+
+/* Clear floats */
+.container::after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.row {
+  display: flex;
+}
+
+.title {
+  color: white;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column {
     width: 100%;
-    color: brown;
-    text-align: center;
-    padding-bottom: 10px;
+    display: block;
+  }
+  .row {
+    display: block;
+    padding-top: 150px;
+  }
+}
+
+@media (min-device-width: 600px) {
+  img[data-src-600px] {
+    content: attr(data-src-600px, url);
+  }
+}
+
+@media (min-device-width: 800px) {
+  img[data-src-800px] {
+    content: attr(data-src-800px, url);
+  }
+}
+
+@media (min-width: 640px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 960px) {
+  body {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  body {
+    font-size: 1.5rem;
+  }
 }
